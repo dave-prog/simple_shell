@@ -1,18 +1,18 @@
-# Simple Shell Project
+# **Simple Shell Project**
 
 
 
-## Project details
+## **Project details**
 -----
 Welcome to the `Simple Shell` project!! This program is a simple shell that can be compiled and launched from the command line.
 
 
-## Syntax
+## **Syntax**
 -----
 When using this shell, the syntax for running any command follows the familiar syntax when running a command in any other shell.
 
 
-## Builtin Commands
+## **Builtin Commands**
 -----
 This shell supports a variety of commands:
 
@@ -32,7 +32,7 @@ This shell supports a variety of commands:
 
 
 
-## Files
+## **Files**
 -----
 Brief description of every file in this repository. Subject to change.
 
@@ -62,14 +62,14 @@ Brief description of every file in this repository. Subject to change.
 | print_error.c | prints special error messages for certain fails |
 
 
-## Environment
+## **Environment**
 ---
 * Language: C
 * OS: Ubuntu 20.04 LTS
 * Compiler: gcc
 * Style guidelines: [Betty style](https://github.com/holbertonschool/Betty/wiki)
 
-## How To Install, Compile, and Use
+## **How To Install, Compile, and Use**
 ---
 Install and Compile
 ```
@@ -104,12 +104,10 @@ $ exit
 ```
 
 
-## To Do
+## **To Do**
 * More functionality can still be added (e.g. handle aliases, pipelines, and redirections)
 
-## Authors
+## **Authors**
 ---
 ### [Olanrewaju David](https://github.com/dave-prog)
--
 ### Musana Yusuf
--
