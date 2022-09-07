@@ -109,5 +109,5 @@ $ exit
 
 ## **Authors**
 ---
-### [Olanrewaju David](https://github.com/dave-prog)
-### Musana Yusuf
+#### [Olanrewaju David](https://github.com/dave-prog)
+#### Musana Yusuf
