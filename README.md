@@ -99,9 +99,6 @@ $ exit
 (your_terminal)$
 ```
 
-## **To Do**
-* More functionality can still be added (e.g. handle aliases, pipelines, and redirections)
-
 ## Tasks
 ### Mandatory:
 1. README, man, AUTHORS
