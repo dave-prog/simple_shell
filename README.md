@@ -2,21 +2,17 @@
 
 
 
-### Project details
+## Project details
 -----
 Welcome to the `Simple Shell` project!! This program is a simple shell that can be compiled and launched from the command line.
 
-### How to Compile
----------------
-gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
-
-### Syntax
+## Syntax
 -----
 When using this shell, the syntax for running any command follows the familiar syntax when running a command in any other shell.
 
 
-### Builtin Commands
+## Builtin Commands
 -----
 This shell supports a variety of commands:
 
@@ -36,7 +32,7 @@ This shell supports a variety of commands:
 
 
 
-### Files
+## Files
 -----
 Brief description of every file in this repository. Subject to change.
 
@@ -48,7 +44,7 @@ Brief description of every file in this repository. Subject to change.
 | _realloc.c| helper function handles reallocation |
 | _strcat.c | concatenates two strings |
 | _strcmp.c | compares if two strings match |
-| _strcpy.c | copies a string` |
+| _strcpy.c | copies a string |
 | _strdup.c | duplicates a string |
 | _str_tok.c | (custom) tokenizes user's command input and returns array |
 | c_str_tok.c | tokenizes PATH to include ":" as Null, checks current dir |
@@ -65,7 +61,8 @@ Brief description of every file in this repository. Subject to change.
 | int_to_string.c | converts int to string to write error messages |
 | print_error.c | prints special error messages for certain fails |
 
-### Environment
+
+## Environment
 ---
 * Language: C
 * OS: Ubuntu 20.04 LTS
@@ -107,12 +104,12 @@ $ exit
 ```
 
 
-### To Do
+## To Do
 * More functionality can still be added (e.g. handle aliases, pipelines, and redirections)
 
-### Authors
+## Authors
 ---
-[Olanrewaju David](https://github.com/dave-prog)
+### [Olanrewaju David](https://github.com/dave-prog)
 -
-[Musana Yusuf]
+### Musana Yusuf
 -
