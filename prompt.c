@@ -26,7 +26,6 @@ int built_in(char **token, list_t *env, int num, char **command)
 	if (_strcmp(token[0], "exit") == 0)
 	{
 		i = __exit(token, env, num, command);
-
 	}
 	/* if user types "env", print, free cmd tokens, and reprompt */
 	else if (_strcmp(token[0], "env") == 0)

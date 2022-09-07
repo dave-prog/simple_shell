@@ -3,7 +3,7 @@
 /**
  * t_strlen - returns token's string length for mallocing
  * @str: a token
- * @pos: index position in user's command typed into shel
+ * @pos: index position in user's command typed into shell
  * @delm: delimeter (e.g. " ");
  * Return: token length
  */

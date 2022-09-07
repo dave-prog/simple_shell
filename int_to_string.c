@@ -16,7 +16,6 @@ int numlen(int n)
 		count++;
 	}
 	return (count);
-
 }
 /**
  * int_to_string - turns an int into a string
@@ -26,7 +25,6 @@ int numlen(int n)
 
 char *int_to_string(int number)
 {
-
 	int digits, tens, i = 0, t = 0, x;
 	char *res;
 
