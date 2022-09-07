@@ -1,7 +1,8 @@
-~*
-*.swp
-a.out
-*.bkup
-hsh
-_betty-d
-_betty-s
+*
+!*/
+!.gitignore
+!AUTHORS.md
+!README.md
+!man_1_hsh
+!Makefile
+!*.[ch]
