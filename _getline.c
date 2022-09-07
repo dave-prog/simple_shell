@@ -1,45 +1,50 @@
 #include "shell.h"
-
+#include "./memofile/memo.h"
 /**
- * get_line - stores into malloced buffer the user's command into shell
- * @str: buffer
- * Return: number of characters read
+ * _getline - get line from file descrip
+ * @lineptr: p to buff
+ * @n: size of buff
+ * @fd: file descrip
+ * @mt: p to memo tracker link list
+ * Return: num of chars read or -1 upon fail
  */
-size_t get_line(char **str)
+ssize_t _getline(char **lineptr, size_t *n, int fd, list_t **mt)
 {
-	ssize_t i = 0, size = 0, t = 0, t2 = 0, n = 0;
-	char buff[1024];
+	static char *buff;
+	ssize_t char_read = 0, char_to_read = BUF_SIZE / 2;
+	ssize_t buf_size = BUF_SIZE, count = 0;
 
-	/* read while there's stdin greater than buffsize; -1 to add a '\0' */
-	while (t2 == 0 && (i = read(STDIN_FILENO, buff, 1024 - 1)))
+	buff = malloc(buf_size);
+	add_node(mt, NULL, buff);
+	if (!buff)
+		return (-1);
+	if (!lineptr || !n)
+		return (-1);
+	if (*lineptr)
 	{
-		if (i == -1) /* check if read errored */
-			return (-1);
-
-		buff[i] = '\0'; /* terminate buff with \0 to use with _strcat */
-
-		n = 0; /* last loop if \n is found in the stdin read */
-		while (buff[n] != '\0')
-		{
-			if (buff[n] == '\n')
-				t2 = 1;
-			n++;
-		}
-
-		/* copy what's read to buff into get_line's buffer */
-		if (t == 0) /* malloc the first time */
-		{
-			i++;
-			*str = malloc(sizeof(char) * i);
-			*str = _strcpy(*str, buff);
-			size = i;
-			t = 1;
-		}
-		else /* _realloc via _strcat with each loop */
-		{
-			size += i;
-			*str = _strcat(*str, buff);
-		}
+		buff = *lineptr;
+		buf_size = *n;
+		if (*n == 1)
+			char_to_read = 1;
+		else
+			char_to_read = buf_size / 2;
 	}
-	return (size);
+	reset_buffer(buff, buf_size);
+	char_read = read(fd, buff + count, char_to_read);
+	if (char_read == -1)
+	{
+		free(buff);
+		return (-1);
+	}
+	if (char_read == 0)
+		return (-2);
+	char_read = _strlen(buff);
+	count += char_read;
+	if (count > 0)
+	{
+		if (buff[count - 1] == '\n')
+			char_read = 0;
+	}
+	while (char_read)
+	return (count);
 }
